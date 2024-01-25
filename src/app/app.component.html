@@ -1,0 +1,2 @@
+<h1 *ngIf="toggle">Parent component</h1>
+<app-child [showdata]=dataForChild [istoggle]="toggle" (toggleChange)='onTogleChange($event)'></app-child>
