@@ -1,2 +1,13 @@
 <h1 *ngIf="toggle">Parent component</h1>
-<app-child [showdata]=dataForChild [istoggle]="toggle" (toggleChange)='onTogleChange($event)'></app-child>
+<app-child
+  [showdata]="dataForChild"
+  [istoggle]="toggle"
+  (toggleChange)="onTogleChange($event)"
+></app-child>
+<ul class="flex items-center gap-4 px-4 mt-5 mb-5">
+  <li class="cursor-pointer font-semibold" routerLink="" >Home</li>
+  <li class="cursor-pointer font-semibold" routerLink="about">About</li>
+  <li class="cursor-pointer font-semibold" routerLink="user">user</li>
+</ul>
+
+<router-outlet></router-outlet>
